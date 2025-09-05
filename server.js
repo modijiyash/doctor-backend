@@ -11,7 +11,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:8090",           // local dev
-    "https://doctor-frontend-murex.vercel.app/" // deployed frontend
+    "https://doctor-frontend-murex.vercel.app" // deployed frontend
   ],
   credentials: true,
 }));
