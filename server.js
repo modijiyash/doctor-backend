@@ -8,7 +8,14 @@ import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 
-app.use(cors({ origin: ["http://localhost:8090"], credentials: true }));
+app.use(cors({
+  origin: [
+    "http://localhost:8090",           // local dev
+    "https://your-frontend.vercel.app" // deployed frontend
+  ],
+  credentials: true,
+}));
+
 app.use(express.json());
 
 const JWT_SECRET = process.env.JWT_SECRET || "super_secret_key";
