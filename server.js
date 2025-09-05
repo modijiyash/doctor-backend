@@ -204,7 +204,8 @@ app.delete("/appointments/:id", async (req, res) => {
 });
 
 // ----------------- START -----------------
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
+
 app.listen(PORT, () =>
-  console.log(`🚀 Doctor server running on http://localhost:${PORT}`)
+  console.log(`🚀 Doctor server running on port ${PORT}`)
 );
